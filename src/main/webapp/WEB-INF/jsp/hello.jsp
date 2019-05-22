@@ -7,6 +7,8 @@
 <title>Hello.jsp</title>
 </head>
 <body>
-	Hello, this is a jsp!
+	Hello, this is a jsp! <br>
+	<a href="/user/1">user page</a>
+	
 </body>
 </html>

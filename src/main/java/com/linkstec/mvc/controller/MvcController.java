@@ -1,14 +1,10 @@
 package com.linkstec.mvc.controller;
 
 import org.springframework.stereotype.Controller;
-
-
-
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.linkstec.mvc.exception.MvcException;
 
@@ -31,9 +27,13 @@ public class MvcController {
     			int i = 3/0;
     		}
     	}
-        return "user";
+    	return "user";
     }
     
+    @GetMapping("/common/{view}.action")
+    public String redirect(@PathVariable("view") String view){        
+        return view;
+    }
     
     @GetMapping("/error")
     public String error(){        

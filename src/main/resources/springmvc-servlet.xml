@@ -24,4 +24,19 @@
         <!-- 后缀 -->
         <property name="suffix" value=".jsp" />
     </bean>
+    
+    <bean name="/test" class="com.linkstec.mvc.controller.BeanNameTestController"/>
+    <bean id="test2" class="com.linkstec.mvc.controller.Controller2"/>
+    <bean id="test3" class="com.linkstec.mvc.controller.BeanNameTestController"/>
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+    	<property name="order">
+    		<value>100</value>
+    	</property>
+    	<property name="mappings">
+    		<props>
+    			<prop key="/test2">test2</prop>
+    			<prop key="/test3">test3</prop>
+    		</props>
+    	</property>
+    </bean> 
 </beans>

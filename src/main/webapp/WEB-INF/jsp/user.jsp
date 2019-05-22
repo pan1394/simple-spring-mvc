@@ -8,6 +8,7 @@
 <title>User</title>
 </head>
 <body>
-	user: <c:out value="${user}" />
+	user: <c:out value="${user}" /> <br>
+	<a href="/common/hello.action"> back</a>
 </body>
 </html>
