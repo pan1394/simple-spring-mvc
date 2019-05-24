@@ -1,5 +1,6 @@
 package com.linkstec.mvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -10,9 +11,10 @@ import com.linkstec.mvc.exception.MvcException;
 
 @Controller
 public class MvcController {
-
+ 
+	
     @GetMapping("/hello")
-    public String hello(){        
+    public String hello(){ 
         return "hello";
     }
     
@@ -34,7 +36,8 @@ public class MvcController {
     public String redirect(@PathVariable("view") String view){        
         return view;
     }
-    
+ 
+  
     @GetMapping("/error")
     public String error(){        
         return "error";
