@@ -5,6 +5,11 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+/**
+ * 使用后置处理器处理默认InternalResourceViewResolver,设置前缀后缀。
+ * @author panyl
+ *
+ */
 //@Component
 public class InteralResoucesViewResolverPostProcessor implements BeanPostProcessor {
 	
