@@ -16,8 +16,8 @@ public class SimpleFilter extends GenericFilterBean {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletRequest rq = (HttpServletRequest)request;
-		System.out.println(request.getCharacterEncoding());
-		System.out.println(rq.getRequestURL());
+		//System.out.println(request.getCharacterEncoding());
+		//System.out.println(rq.getRequestURL());
 		chain.doFilter(request, response);
 	}
 
